@@ -9,7 +9,7 @@ System.locate = function(load) {
   return Promise.resolve(systemLocate.call(this, load)).then(function(address) {
     return address + System.cacheBust;
   });
-}
+};
 System.cacheBust = '?bust=' + Date.now();
 
 
@@ -32,7 +32,8 @@ System.config({
 
 System.transpiler = 'babel';
 
-System.import('app/Main').then(function (Main) {
-  new Main();
+System.import('app/Main').then(function (main) {
+  // console.log(main);
+  new main.Main();
 });
 

@@ -2,20 +2,17 @@
  * Created by rytis on 2015-03-18.
  */
 
-var StringUtil = require('app/StringUtil');
-var Experiment = require('app/Experiment');
-var Es6Class  = require('app/Es6Class').default;
+  // global imports
+// window.StringUtil = require('app/StringUtil');
+// window.Experiment = require('app/Experiment');
+import Es6Class from 'app/Es6Class'
+window.Es6Class   = Es6Class;
 
-module.exports = (function() {
+export class Main {
 
-  function Main() {
-    "use strict";
+  constructor() {
     let testInstance = new Es6Class();
   }
 
-  Main.prototype = {};
-
-  return Main;
-
-})();
+}
 

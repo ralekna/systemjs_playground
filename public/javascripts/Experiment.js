@@ -4,7 +4,7 @@
 String.prototype.triedSomething = function () {
   console.log('tried something');
 };
-console.log('defining');
+// console.log('defining');
 function ImGlobal() {
   console.log('im global');
 }

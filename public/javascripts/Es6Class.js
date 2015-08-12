@@ -1,12 +1,13 @@
 /**
  * Created by rytis on 2015-03-27.
  */
-export default class Es6Class {
+export default class {
 
   constructor() {
     this.tryGererators();
     this.tryTemplatesInterpolation();
     this.tryDeconstruction();
+    this.tryScopeBinding();
   }
 
   static *incNumber(x) {
@@ -37,6 +38,16 @@ export default class Es6Class {
   tryTemplatesInterpolation () {
     let myName = 'rytis';
     console.log(`Hello, ${myName}!`);
+  }
+
+  tryScopeBinding () {
+
+    let someFunc = () => console.log(this);
+    someFunc();
+    someFunc.call('hello1');
+
+    (function () { console.log(this) }).bind('hello2')();
+
   }
 
 }
